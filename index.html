@@ -2,21 +2,24 @@
 <html>
   <head>
     <script>
-       function myFunction ()
-        get
+       function ftoc(){
+        document.getElementById("c").value=(document.getElementById("f").value-32)*5/9;
+       }
+       function ctof(){
+        document.getElementById("f").value=(document.getElementById("c").value+32)*9/5;
+       }
     </script>
     
   </head>
 <body>
   <h2>convertisseur</h2>
-
-<form action="/action_page.php">
-  <label for="fname">temperature en c</label><br>
-  <input type="number" id="fname"><br>
-  <label for="lname">temperature en f</label><br>
-  <input type="number" id="lname"><br>
+  <label>temperature en c</label><br>
+  <input type="number" id="c"><br>
+  <label>temperature en f</label><br>
+  <input type="number" id="f"><br>
 </form>
-<button type="button" onclick="myFunction()">convertir</button>
+<button type="button" onclick="ctof()">convertir de c en f</button>
+<button type="button" onclick="ftoc()">convertir de f en c</button>
 </body>
 </html>
 
